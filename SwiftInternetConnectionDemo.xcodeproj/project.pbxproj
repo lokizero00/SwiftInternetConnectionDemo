@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1274BBCD1F945CFA009D0EB3 /* CheckActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1274BBCB1F945CFA009D0EB3 /* CheckActionViewController.swift */; };
+		1274BBCE1F945CFA009D0EB3 /* CheckActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1274BBCC1F945CFA009D0EB3 /* CheckActionViewController.xib */; };
+		12AF23E41FC2B4B200D9236E /* JsonRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF23E21FC2B4B200D9236E /* JsonRequestViewController.swift */; };
+		12AF23E51FC2B4B200D9236E /* JsonRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12AF23E31FC2B4B200D9236E /* JsonRequestViewController.xib */; };
 		12B6AEC31F94519400482B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B6AEC21F94519400482B3D /* AppDelegate.swift */; };
 		12B6AEC51F94519400482B3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B6AEC41F94519400482B3D /* ViewController.swift */; };
 		12B6AEC81F94519400482B3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B6AEC61F94519400482B3D /* Main.storyboard */; };
 		12B6AECB1F94519400482B3D /* SwiftInternetConnectionDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12B6AEC91F94519400482B3D /* SwiftInternetConnectionDemo.xcdatamodeld */; };
 		12B6AECD1F94519400482B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B6AECC1F94519400482B3D /* Assets.xcassets */; };
 		12B6AED01F94519400482B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B6AECE1F94519400482B3D /* LaunchScreen.storyboard */; };
+		12B6AED81F9451A300482B3D /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B6AED71F9451A300482B3D /* Reach.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1274BBCB1F945CFA009D0EB3 /* CheckActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckActionViewController.swift; sourceTree = "<group>"; };
+		1274BBCC1F945CFA009D0EB3 /* CheckActionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckActionViewController.xib; sourceTree = "<group>"; };
+		12AF23E21FC2B4B200D9236E /* JsonRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRequestViewController.swift; sourceTree = "<group>"; };
+		12AF23E31FC2B4B200D9236E /* JsonRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JsonRequestViewController.xib; sourceTree = "<group>"; };
 		12B6AEBF1F94519400482B3D /* SwiftInternetConnectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftInternetConnectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B6AEC21F94519400482B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B6AEC41F94519400482B3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,7 @@
 		12B6AECC1F94519400482B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B6AECF1F94519400482B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12B6AED11F94519400482B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B6AED71F9451A300482B3D /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				12B6AECE1F94519400482B3D /* LaunchScreen.storyboard */,
 				12B6AED11F94519400482B3D /* Info.plist */,
 				12B6AEC91F94519400482B3D /* SwiftInternetConnectionDemo.xcdatamodeld */,
+				12B6AED71F9451A300482B3D /* Reach.swift */,
+				1274BBCB1F945CFA009D0EB3 /* CheckActionViewController.swift */,
+				1274BBCC1F945CFA009D0EB3 /* CheckActionViewController.xib */,
+				12AF23E21FC2B4B200D9236E /* JsonRequestViewController.swift */,
+				12AF23E31FC2B4B200D9236E /* JsonRequestViewController.xib */,
 			);
 			path = SwiftInternetConnectionDemo;
 			sourceTree = "<group>";
@@ -127,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B6AED01F94519400482B3D /* LaunchScreen.storyboard in Resources */,
+				12AF23E51FC2B4B200D9236E /* JsonRequestViewController.xib in Resources */,
+				1274BBCE1F945CFA009D0EB3 /* CheckActionViewController.xib in Resources */,
 				12B6AECD1F94519400482B3D /* Assets.xcassets in Resources */,
 				12B6AEC81F94519400482B3D /* Main.storyboard in Resources */,
 			);
@@ -139,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12AF23E41FC2B4B200D9236E /* JsonRequestViewController.swift in Sources */,
 				12B6AEC51F94519400482B3D /* ViewController.swift in Sources */,
+				12B6AED81F9451A300482B3D /* Reach.swift in Sources */,
 				12B6AEC31F94519400482B3D /* AppDelegate.swift in Sources */,
 				12B6AECB1F94519400482B3D /* SwiftInternetConnectionDemo.xcdatamodeld in Sources */,
+				1274BBCD1F945CFA009D0EB3 /* CheckActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SSUF436QZC;
 				INFOPLIST_FILE = SwiftInternetConnectionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loki.zero.SwiftInternetConnectionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SSUF436QZC;
 				INFOPLIST_FILE = SwiftInternetConnectionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loki.zero.SwiftInternetConnectionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
