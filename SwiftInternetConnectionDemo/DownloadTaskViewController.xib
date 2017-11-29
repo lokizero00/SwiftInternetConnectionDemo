@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DownloadTaskViewController" customModule="SwiftInternetConnectionDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonDownloadAdvance" destination="019-sT-Uku" id="HwN-Bl-Uhc"/>
+                <outlet property="buttonDownloadSimple" destination="Mxv-4v-PV7" id="tXH-ZY-krn"/>
+                <outlet property="downloadProgress" destination="VzF-GY-Llm" id="bqC-Iw-0Zp"/>
+                <outlet property="imageView" destination="hV8-hX-quN" id="rGO-Xi-HqS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="019-sT-Uku">
+                    <rect key="frame" x="50" y="617" width="275" height="30"/>
+                    <color key="backgroundColor" red="0.67586854799999996" green="0.29758909109999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="enR-E7-R4x"/>
+                    </constraints>
+                    <state key="normal" title="有进度下载">
+                        <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载进度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKG-cf-hco">
+                    <rect key="frame" x="60" y="526" width="87" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="87" id="GNU-9Z-aZg"/>
+                        <constraint firstAttribute="height" constant="21" id="yUj-wm-f5r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-GY-Llm">
+                    <rect key="frame" x="177" y="526" width="168" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="F21-Hr-CCS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxv-4v-PV7">
+                    <rect key="frame" x="50" y="577" width="275" height="30"/>
+                    <color key="backgroundColor" red="0.67586854799999996" green="0.29758909109999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AXi-5f-nGQ"/>
+                    </constraints>
+                    <state key="normal" title="无进度下载">
+                        <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-hX-quN">
+                    <rect key="frame" x="20" y="40" width="335" height="456"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="019-sT-Uku" secondAttribute="bottom" constant="20" id="8yt-Za-Izb"/>
+                <constraint firstItem="hV8-hX-quN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="B9X-QT-Wdl"/>
+                <constraint firstItem="019-sT-Uku" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="FH1-zN-3IK"/>
+                <constraint firstItem="019-sT-Uku" firstAttribute="top" secondItem="Mxv-4v-PV7" secondAttribute="bottom" constant="10" id="Fh4-U8-9oN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="019-sT-Uku" secondAttribute="trailing" constant="50" id="JJ3-jn-0NC"/>
+                <constraint firstItem="hV8-hX-quN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="KfU-XQ-0Np"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mxv-4v-PV7" secondAttribute="trailing" constant="50" id="PGR-Gy-cwS"/>
+                <constraint firstItem="Mxv-4v-PV7" firstAttribute="top" secondItem="dKG-cf-hco" secondAttribute="bottom" constant="30" id="VdX-h1-vM8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VzF-GY-Llm" secondAttribute="trailing" constant="30" id="WVJ-bD-a1W"/>
+                <constraint firstItem="dKG-cf-hco" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="bHo-eF-Tr1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hV8-hX-quN" secondAttribute="trailing" constant="20" id="cbJ-8h-4oH"/>
+                <constraint firstItem="dKG-cf-hco" firstAttribute="top" secondItem="hV8-hX-quN" secondAttribute="bottom" constant="30" id="dpW-Wo-F9X"/>
+                <constraint firstItem="VzF-GY-Llm" firstAttribute="leading" secondItem="dKG-cf-hco" secondAttribute="trailing" constant="30" id="o1z-iZ-uzX"/>
+                <constraint firstItem="Mxv-4v-PV7" firstAttribute="top" secondItem="VzF-GY-Llm" secondAttribute="bottom" constant="30" id="ovZ-qU-5JC"/>
+                <constraint firstItem="Mxv-4v-PV7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="z0p-CA-Lbu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="61.5"/>
+        </view>
+    </objects>
+</document>

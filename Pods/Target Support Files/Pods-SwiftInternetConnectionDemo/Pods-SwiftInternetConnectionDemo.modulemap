@@ -1,0 +1,6 @@
+framework module Pods_SwiftInternetConnectionDemo {
+  umbrella header "Pods-SwiftInternetConnectionDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

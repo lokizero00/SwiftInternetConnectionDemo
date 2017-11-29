@@ -44,6 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         jsonActionNavCtl.tabBarItem.image=tabBarItemImage
         tabBarController.addChildViewController(jsonActionNavCtl)
         
+        let downloadActionCtl=DownloadTaskViewController(nibName: "DownloadTaskViewController", bundle: Bundle.main)
+        let downloadActionNavCtl=UINavigationController(rootViewController: downloadActionCtl)
+        downloadActionNavCtl.title="下载"
+        downloadActionNavCtl.tabBarItem.image=tabBarItemImage
+        tabBarController.addChildViewController(downloadActionNavCtl)
+        
+        let uploadActionCtl=UploadTaskViewController(nibName: "UploadTaskViewController", bundle: Bundle.main)
+        let uploadActionNavCtl=UINavigationController(rootViewController: uploadActionCtl)
+        uploadActionNavCtl.title="上传"
+        uploadActionNavCtl.tabBarItem.image=tabBarItemImage
+        tabBarController.addChildViewController(uploadActionNavCtl)
+        
         self.window?.makeKeyAndVisible()
     }
 
