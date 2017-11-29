@@ -50,6 +50,7 @@ class JsonRequestViewController: UIViewController {
         //用于同步操作的信号量
         let semaphore=DispatchSemaphore(value: 0)
         
+        //初始化请求
         let dataTask=URLSession.shared.dataTask(with: request, completionHandler: {
             (data,response,error) in
             
@@ -57,12 +58,25 @@ class JsonRequestViewController: UIViewController {
                 print(error.debugDescription)
             }else{
                 let responseStr=String(data:data!,encoding:.utf8)
+                //包体数据
                 print(responseStr!)
                 
+                //URLResponse类里没有http返回值， 需要先强制转换！
                 let httpResponse=response as? HTTPURLResponse
                 if(httpResponse != nil){
                     if(httpResponse!.statusCode==200){
                         if let json=try? JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:Any] {
+                             /* 返回json数据格式      {"status":"ok","msg":"welcome","data":["100","220","300","400"]} ，具体看Server端定义的返回格式    */
+//                            //读取普通数据
+//                            let strMsg2 = json["msg"] as! String
+//                            print(strMsg2)
+//
+//                            //读取数组
+//                            var array: [String] = json["data"] as! [String]
+//                            for index in 0..<array.count{
+//                                print( array[index])
+//                            }
+                            
                             let status=json["status"] as! String
                             let msg = json["msg"] as! String
                             if(status != "ok"){
@@ -97,19 +111,33 @@ class JsonRequestViewController: UIViewController {
         var request=URLRequest(url: url!)
         request.httpMethod="GET"
         
+        //初始化请求
         let dataTask=URLSession.shared.dataTask(with: request, completionHandler: {
             (data,response,error) in
             if error != nil {
                 print(error.debugDescription)
             }else{
+                //URLResponse类里没有http返回值， 需要先强制转换！
                 let httpResponse=response as? HTTPURLResponse
                 if (httpResponse != nil) {
                     if (httpResponse!.statusCode==200) {
                         if let json=try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]{
+                            /* 返回json数据格式      {"status":"ok","msg":"welcome","data":["100","220","300","400"]} ，具体看Server端定义的返回格式    */
+//                            //读取普通数据
+//                            let strMsg2 = json["msg"] as! String
+//                            print(strMsg2)
+//
+//                            //读取数组
+//                            var array: [String] = json["data"] as! [String]
+//                            for index in 0..<array.count{
+//                                print( array[index])
+//                            }
+
                             let id=json["id"] as! Int
                             let userName = json["userName"] as! String
                             let password=json["password"] as! String
                             
+                            //更新UI需要在主线程中执行
                             DispatchQueue.main.async {
                                 self.label_id?.text="\(id)"
                                 self.label_userName?.text=userName

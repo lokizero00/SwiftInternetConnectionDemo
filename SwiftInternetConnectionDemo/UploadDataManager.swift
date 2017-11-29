@@ -65,6 +65,7 @@ class UploadDataManager:NSObject{
                 }
             }, to: hostUrl,headers: headers, encodingCompletion: {
                 encodingResult in
+                //把encodingResult返回出去
                 comparBlock(encodingResult)
                 
             })

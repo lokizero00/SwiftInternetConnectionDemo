@@ -30,6 +30,7 @@ class DownloadTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //简单下载，没有下载进度
     @objc func downloadSimple(){
         downloadProgress?.text="0%"
         let url=URL(string: "http://127.0.0.1:8080/ios-server-web/images/test01.png")
@@ -67,6 +68,7 @@ class DownloadTaskViewController: UIViewController {
         downloadTask.resume()
     }
     
+    //带进度的下载
     @objc func downloadAdvance(){
         downloadProgress?.text="0%"
         let url=URL(string: "http://127.0.0.1:8080/ios-server-web/images/test01.png")
@@ -88,7 +90,9 @@ class DownloadTaskViewController: UIViewController {
 
 }
 
+//声明实现URLSessionDownloadDelegate代理，用于监听下载进度等
 extension DownloadTaskViewController :URLSessionDownloadDelegate{
+    //下载结束回调事件
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         print("下载结束")
         
@@ -113,6 +117,7 @@ extension DownloadTaskViewController :URLSessionDownloadDelegate{
         }
     }
     
+    //监听下载进度
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         let written:CGFloat=(CGFloat) (bytesWritten)
         let total:CGFloat=(CGFloat) (totalBytesExpectedToWrite)

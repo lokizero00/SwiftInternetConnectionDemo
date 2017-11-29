@@ -30,6 +30,7 @@ class UploadTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //利用Alamofire组件进行文件上传
     @objc func sessionUpload(){
         if let uploadImage=imagePreview?.image{
             let imagedata=UIImagePNGRepresentation(uploadImage)
